@@ -1,0 +1,12 @@
+use_aurora     = true
+engine         = "aurora-postgresql"
+engine_version = "15.4"
+instance_class = "db.t3.medium"
+multi_az       = false
+
+db_password = "REPLACE_ME"
+
+tags = {
+  Project = "lesson-db-module"
+  Env     = "dev"
+}

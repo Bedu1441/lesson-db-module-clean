@@ -27,17 +27,14 @@ module "rds" {
   allowed_cidr_blocks = ["10.0.0.0/16"]
 
   engine         = var.engine
-  engine_version = "15.4"
+  engine_version = var.engine_version
 
-  instance_class = "db.t3.medium"
-  multi_az       = false
+  instance_class = var.instance_class
+  multi_az       = var.multi_az
 
   database_name   = "appdb"
   master_username = "dbadmin"
   master_password = var.db_password
 
-  tags = {
-    Project = "lesson-db-module"
-    Env     = "dev"
-  }
+  tags = var.tags
 }

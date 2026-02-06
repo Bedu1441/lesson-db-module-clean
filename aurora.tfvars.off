@@ -1,0 +1,2 @@
+use_aurora = true
+engine     = "aurora-postgresql"

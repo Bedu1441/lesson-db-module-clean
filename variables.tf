@@ -21,3 +21,27 @@ variable "engine" {
   description = "DB engine for the module."
   default     = "postgres"
 }
+
+variable "engine_version" {
+  type        = string
+  description = "DB engine version."
+  default     = "15.4"
+}
+
+variable "instance_class" {
+  type        = string
+  description = "Instance class for RDS instance or Aurora writer instance."
+  default     = "db.t3.medium"
+}
+
+variable "multi_az" {
+  type        = bool
+  description = "Multi-AZ for RDS instance (ignored for Aurora)."
+  default     = false
+}
+
+variable "tags" {
+  type        = map(string)
+  description = "Common tags."
+  default     = {}
+}
