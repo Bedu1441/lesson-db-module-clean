@@ -45,3 +45,15 @@ variable "tags" {
   description = "Common tags."
   default     = {}
 }
+
+variable "publicly_accessible" {
+  type        = bool
+  description = "Pass-through for DB public accessibility (used by examples)."
+  default     = false
+}
+
+variable "allowed_cidr_blocks" {
+  type        = list(string)
+  description = "Pass-through for DB SG ingress CIDRs (used by examples)."
+  default     = ["10.0.0.0/16"]
+}
